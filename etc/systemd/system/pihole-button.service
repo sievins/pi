@@ -1,0 +1,15 @@
+[Unit]
+Description=Pi-hole Button Service
+Requires=pihole-FTL.service
+After=pihole-FTL.service
+
+[Service]
+User=sievins
+Group=sievins
+ExecStart=/usr/bin/python3 /usr/local/bin/pihole-button.py
+WorkingDirectory=/home/sievins
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
