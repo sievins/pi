@@ -2,6 +2,7 @@
 Description=Pi-hole Button Service
 Requires=pihole-FTL.service
 After=pihole-FTL.service
+PartOf=pihole-FTL.service
 
 [Service]
 User=sievins
